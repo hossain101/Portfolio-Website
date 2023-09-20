@@ -1,14 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 
-@font-face {
-    font-family: 'Zeppelin 32 Mono';
-    src: url('path-to-font/Zeppelin32Mono-Regular.woff2') format('woff2'),
-         url('path-to-font/Zeppelin32Mono-Regular.woff') format('woff');
-    /* Add other font formats if available */
-    font-weight: normal;
-    font-style: normal;
-}
+
 @font-face {
     font-family: 'OCR-B-10 Pitch CE';
     src: url('path-to-font/OCR-B-10-Pitch-CE-Regular.woff2') format('woff2'),
@@ -513,7 +506,7 @@ header .navbar ul li a:hover {
 .about .row .content p {
     font-size: 1.5rem;
     margin-top: 1.5rem;
-    font-family: "Nunito";
+   
     font-weight: 600;
 }
 
@@ -521,7 +514,8 @@ header .navbar ul li a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    font-family: "Nunito";
+    
+
     font-weight: 600;
 }
 
@@ -663,7 +657,7 @@ header .navbar ul li a:hover {
 .skills .container .col .bar .info span {
     font-size: 1.8rem;
     font-weight: 500;
-    font-family: "Poppins";
+    
     margin-left: 0.5rem;
 }
 
@@ -794,7 +788,8 @@ header .navbar ul li a:hover {
 .education .qoute {
     font-size: 1.5rem;
     text-align: center;
-    font-family: "Nunito", sans-serif;
+    
+
     font-weight: 600;
     margin-top: 0.5rem;
 }
@@ -875,7 +870,7 @@ header .navbar ul li a:hover {
     color: rgb(34, 109, 0);
     text-align: left;
     margin: 1rem;
-    font-family: "Nunito", sans-serif;
+    
     font-weight: 700;
 }
 
@@ -1040,7 +1035,7 @@ header .navbar ul li a:hover {
 .work .viewall .btn span {
     font-weight: 600;
     font-size: 1.7rem;
-    font-family: "Nunito", sans-serif;
+   
 }
 
 .work .viewall .btn i {
@@ -1102,7 +1097,7 @@ header .navbar ul li a:hover {
     text-align: center;
     font-weight: 600;
     color: #02094b;
-    font-family: "Font Awesome\ 5 Free";
+    
 }
 
 .experience .left {
@@ -1192,7 +1187,8 @@ header .navbar ul li a:hover {
 .morebtn .btn span {
     font-weight: 600;
     font-size: 1.7rem;
-    font-family: "Nunito", sans-serif;
+    
+
 }
 
 .morebtn .btn i {
@@ -1329,7 +1325,7 @@ form .message textarea {
     outline: none;
     padding: 0 16px 0 48px;
     font-size: 16px;
-    font-family: "Poppins", sans-serif;
+   
     border-radius: 5px;
     border: 1px solid rgb(51, 51, 51);
     background: #e5ecfb;
@@ -1392,7 +1388,8 @@ form .button-area {
     background: #2506ad;
     box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
     transition: 0.3s ease;
-    font-family: "Nunito", sans-serif;
+   
+
 }
 
 .button-area button:hover {
@@ -1447,9 +1444,10 @@ form .button-area {
 
 /* footer section starts */
 .footer {
+    
     min-height: auto;
     padding-top: 0;
-    background: rgb(0, 1, 43);
+    background: #D82E2E;
 }
 
 .footer .box-container {
@@ -1477,16 +1475,22 @@ form .button-area {
     text-transform: none;
 }
 
-.footer .box-container .box p i {
-    padding-right: 1rem;
-    color: #ffae00;
+.footer .box-container .box p a {
+    
+    color: #060b2c;
+ 
 }
 
 .footer .box-container .box a {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: rgb(238, 238, 238);
     padding: 0.3rem 0;
     display: block;
+    text-decoration: none;
+    text-transform: none;
+}
+.footer .box-container .box a:hover {
+    color: #ffae00;
 }
 
 .footer .box-container .box a:hover {
@@ -1524,7 +1528,7 @@ form .button-area {
     padding: 1rem 0 0 0;
     text-align: center;
     font-size: 1.5rem;
-    font-family: "Nunito", sans-serif;
+    
     font-weight: 600;
     color: #fff;
     border-top: 0.1rem solid #fff3;
