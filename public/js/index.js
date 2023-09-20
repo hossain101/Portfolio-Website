@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const testimonialContainer = document.querySelector('.testimonial-container');
-
-testimonialContainer.addEventListener('mouseenter', () => {
-    testimonialContainer.style.animationPlayState = 'paused';
-});
-
-testimonialContainer.addEventListener('mouseleave', () => {
-    testimonialContainer.style.animationPlayState = 'running';
-});
+// pre loader start
+function loader() {
+  document.querySelector(".loader-container").classList.add("fade-out");
+}
+function fadeOut() {
+  setInterval(loader, 500);
+}
+window.onload = fadeOut;
+// pre loader end

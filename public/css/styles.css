@@ -62,7 +62,7 @@ html::-webkit-scrollbar-thumb {
     top: 0;
     left: 0;
     z-index: 10000;
-    background: #e6eff1;
+    background: #000000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,6 +72,11 @@ html::-webkit-scrollbar-thumb {
 
 .loader-container.fade-out {
     top: -120%;
+}
+
+.loader-container img{
+    width: 30%;
+    height:30%
 }
 
 /* pre loader end */
