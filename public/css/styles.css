@@ -113,7 +113,7 @@ header .logo {
     font-size: 1.9rem;
     font-weight: 800;
     text-decoration: none;
-    color: #0e2431;
+    color: #ececec;
 }
 
 header .logo i {
@@ -121,7 +121,7 @@ header .logo i {
 }
 
 header .logo:hover {
-    color: #fc8c05;
+    color: #002060;
 }
 
 header .navbar ul {
@@ -1489,12 +1489,10 @@ form .button-area {
     text-decoration: none;
     text-transform: none;
 }
-.footer .box-container .box a:hover {
-    color: #ffae00;
-}
+
 
 .footer .box-container .box a:hover {
-    color: #ffae00;
+    color: #002060
 }
 
 .footer .box-container .box .share {
@@ -1521,7 +1519,7 @@ form .button-area {
     background: transparent;
     transform: scale(0.98);
     border: 0.1rem solid rgb(180, 178, 178);
-    color: #ffae00;
+    color: #002060;
 }
 
 .footer .credit {
