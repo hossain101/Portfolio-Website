@@ -23,6 +23,23 @@ app.get('/', function(req, res){
 
 });
 
+app.get('/education', function(req, res){
+
+  res.render('education');
+
+
+});
+
+
+app.get('/experience', function(req, res){
+
+  res.render('experience');
+
+
+});
+
+
+
 
 
 
