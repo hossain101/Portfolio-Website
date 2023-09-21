@@ -18,3 +18,19 @@ function fadeOut() {
 }
 window.onload = fadeOut;
 // pre loader end
+
+//scroll funciton
+document.querySelectorAll('a[href*="#"]').forEach(function(anchor) {
+  anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      var targetId = this.getAttribute('href').substring(1);
+      var targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+          window.scrollTo({
+              top: targetElement.getBoundingClientRect().top + window.scrollY,
+              behavior: 'smooth'
+          });
+      }
+  });
+});
