@@ -7,15 +7,18 @@ import Loader from "../components/Loader";
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const formRef = useRef(null);
+  const [currentAnimation, setCurrentAnimation] = useState('idle');
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleBlur = () => {};
+  const handleBlur = () =>setCurrentAnimation('idle') ;
+  const handleFocus = () =>setCurrentAnimation('walk');
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setCurrentAnimation('hit');
     setIsLoading(true);
 
     emailjs
@@ -37,6 +40,7 @@ const Contact = () => {
         console.log(result.text);
         setIsLoading(false);
         setForm({ name: "", email: "", message: "" });
+        setCurrentAnimation('idle');
         alert(
           "Your message has been sent successfully. I will get back to you soon. Thank you!"
         );
@@ -66,7 +70,7 @@ const Contact = () => {
               className="input"
               placeholder="Shoaib"
               onChange={handleChange}
-              onFocus={handleBlur}
+              onFocus={handleFocus}
               onBlur={handleBlur}
               required
               value={form.name}
@@ -81,7 +85,7 @@ const Contact = () => {
               className="input"
               placeholder="example@domain.com"
               onChange={handleChange}
-              onFocus={handleBlur}
+              onFocus={handleFocus}
               onBlur={handleBlur}
               required
               value={form.email}
@@ -96,7 +100,7 @@ const Contact = () => {
               className="input"
               placeholder="Dear Shoaib, ..."
               onChange={handleChange}
-              onFocus={handleBlur}
+              onFocus={handleFocus}
               onBlur={handleBlur}
               requiredrows={5}
               value={form.message}
@@ -125,6 +129,7 @@ const Contact = () => {
             
 
           <Fox 
+            currentAnimation={currentAnimation}
           position={[0.5, 0.35, 0]}
           rotation={[12.6, -0.6, 0]}
             scale={[0.5, 0.5, 0.5]}
