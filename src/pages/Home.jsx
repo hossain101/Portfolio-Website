@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react";
+import { Suspense, useState,useEffect,useRef } from "react";
 
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
@@ -9,7 +9,25 @@ import Plane from "../models/Plane";
 import HomeInfo from "../components/HomeInfo";
 //import { is } from "@react-three/fiber/dist/declarations/src/core/utils";
 
+import sakura from "../assets/sakura.mp3";
+import { soundoff, soundon } from "../assets/icons";
+
 const Home = () => {
+  const audioRef = useRef(new Audio(sakura));
+  audioRef.current.loop = true;
+  audioRef.current.volume = 0.4;
+
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    if (isPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isPlaying]);
+
+
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(1);
 
@@ -87,6 +105,19 @@ const Home = () => {
           />
         </Suspense>
       </Canvas>
+      <div className="absolute bottom-2 left-2 ">
+      
+        <button
+          className="bg-white rounded-full p-2"
+          onClick={() => setIsPlaying(!isPlaying)}
+        >
+          <img
+            src={isPlaying ? soundon : soundoff}
+            alt="sound"
+            className="w-8 h-8 object-contain"
+          />
+        </button>
+      </div>
     </section>
   );
 };
